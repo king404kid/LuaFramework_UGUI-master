@@ -1,0 +1,17 @@
+﻿        [MenuItem({0}, false, 15)]
+        static public void {1}()
+        {
+            UnityEngine.Object[] obj = GetSelectObj();
+            if (obj == null)
+                return;
+
+            foreach (UnityEngine.Object temp in obj)
+            {
+                if (temp != null)
+                {
+                    UnityEngine.GameObject go = temp as GameObject;
+                    string newName = CreateGameObjectName({2}, go);
+                    go.name = newName;
+                }
+            }
+        }

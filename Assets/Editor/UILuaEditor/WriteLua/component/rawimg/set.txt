@@ -1,0 +1,6 @@
+function {0}:{1}(path)
+    local tex = UITools:loadTexture(path);
+    if self.{2} ~= nil and tex ~= nil then
+        self.{2}.texture = tex;
+    end
+end

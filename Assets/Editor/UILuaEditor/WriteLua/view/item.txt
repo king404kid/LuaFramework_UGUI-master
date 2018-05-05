@@ -1,0 +1,54 @@
+﻿-- !@#start
+{0} = 
+{
+  --!@#definestart
+{1}
+  --!@#defineend
+}
+
+function {0}.New(obj)     
+    local s = obj or {}      
+    return setmetatable(s, { __index = {0} })
+end
+
+{2}
+
+-------------输入监听--------------
+
+function {0}:RegisterClick()
+{3}
+end
+
+-- !@#startClick
+{4}
+-- !@#endClick
+-- !@#end
+------------生命周期------------------
+
+
+function {0}:Awake(obj)
+    self:AddListener();
+end
+
+function {0}:Start()
+  
+end
+
+function {0}:Update(data)
+ 
+end
+function {0}:OnClose()
+    self:RemoveListener();
+end
+function {0}:AddListener()
+    self:RegisterClick();
+end
+function {0}:RemoveListener()
+    
+end
+function {0}:OnActiveSelfLabelPage()
+
+end
+function {0}:OnHideSelfLabelPage()
+
+end

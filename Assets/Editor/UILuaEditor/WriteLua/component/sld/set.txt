@@ -1,0 +1,5 @@
+function {0}:{1}(var)
+    if self.{2} ~= nil and var ~= nil then
+        self.{2}.value = var;
+    end
+end

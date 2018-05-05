@@ -1,0 +1,22 @@
+﻿
+require "Common/define"
+require "service/DataRepo";
+require "Common/ListData"
+ 
+{0} = {};
+ local this = {0};
+ local panel = nil;
+ 
+function  {0}.Panel(panelname)
+    return UIManager.GetWindow(panelname);
+end
+
+function {0}.RegisterListener()
+   
+end
+
+function  {0}.UnregisterListener()
+  
+end
+
+return this

@@ -1,0 +1,37 @@
+﻿using System.Collections.Generic;
+using UnityEditor;
+using UnityEngine;
+
+namespace LuaEditor
+{
+    public class ComponentTypeEditor
+    {
+{0}	
+
+        static public UnityEngine.Object[] GetSelectObj()
+        {
+            UnityEngine.Object[] obj = UnityEditor.Selection.GetFiltered(typeof(UnityEngine.Object), SelectionMode.Unfiltered);
+            if (obj != null && obj.Length > 0)
+            {
+                return obj;
+            }
+            return null;
+        }
+
+        static public string CreateGameObjectName(string stype, GameObject go)
+        {
+            string name = go.name;
+            string str_type = "#" + stype;
+            int index = name.IndexOf("#");
+            string newName = name;
+            if (index == -1)
+                newName = name + str_type;
+            else
+            {
+                string del_str = name.Substring(index);
+                newName = name.Replace(del_str, str_type);
+            }
+            return newName;
+        }
+    }
+}

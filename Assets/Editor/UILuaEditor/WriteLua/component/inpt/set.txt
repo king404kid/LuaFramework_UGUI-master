@@ -1,0 +1,5 @@
+function {0}:{1}(str)
+    if self.{2} ~= nil then
+        self.{2}.text = str;
+    end
+end

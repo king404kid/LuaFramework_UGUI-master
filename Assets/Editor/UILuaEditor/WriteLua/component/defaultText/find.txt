@@ -1,0 +1,1 @@
+    self:find_child_component({0}, "Text").text = {1};

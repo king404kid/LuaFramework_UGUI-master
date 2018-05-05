@@ -1,0 +1,1 @@
+  {0}  = self:find_child_component({1}, "Text");

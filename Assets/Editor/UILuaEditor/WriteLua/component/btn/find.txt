@@ -1,0 +1,1 @@
+  self.lb:AddSelfClick(self.{0}.gameObject, self.{1},self);

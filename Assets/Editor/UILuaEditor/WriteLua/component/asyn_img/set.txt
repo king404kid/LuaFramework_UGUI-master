@@ -1,0 +1,13 @@
+function {0}:{1}(atlas,name)
+	if self.{2}_id ~= nil and self.{2}_atlas ~= nil then 
+        UITools:RemoveUILoaderCallback(self.{2}_atlas,self.{2}_id)
+    end
+	self.{2}_atlas = atlas
+    self.{2}_id = UITools:loadSpriteAsync(atlas,name,function (sprite)
+         self.{2}_id = nil
+         self.{2}_atlas = nil
+         if self.{2} ~= nil and sprite ~= nil then
+             self.{2}.sprite = sprite;
+         end
+    end)
+end

@@ -1,0 +1,6 @@
+function {0}:{1}(atlas,name)
+    local sprite = UITools:loadSprite(atlas, name);
+    if self.{2} ~= nil and sprite ~= nil then
+        self.{2}.sprite = sprite;
+    end
+end
