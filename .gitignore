@@ -1,0 +1,5 @@
+# Library目录，不包括Library
+Library/
+
+# StreamingAssets目录，和StreamingAssets.meta
+StreamingAssets
