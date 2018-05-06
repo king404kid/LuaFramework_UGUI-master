@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/UINew/scene/test/testtoolbuildscene.unity
-  isLoaded: 1
-  isActive: 1
