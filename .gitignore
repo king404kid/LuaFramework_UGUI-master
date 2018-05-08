@@ -1,5 +1,6 @@
-# Library目录，不包括Library
-Library/
+# Temp
+/Temp
 
 # StreamingAssets目录，和StreamingAssets.meta
-StreamingAssets
+/Assets/StreamingAssets
+/Assets/StreamingAssets.meta
