@@ -277,4 +277,52 @@ public class FileTools
         }
         return returnStr;
     }
+
+    /// <summary>
+    /// 获取指定路径下一层的指定格式的文件的路径
+    /// </summary>
+    /// <param name="path"></param>
+    /// <param name="exName"></param>
+    /// <returns></returns>
+    public static List<string> GetSubFiles(string path, string exName) {
+        List<string> names = new List<string>();
+        if (IsDirectoryExist(path) == false) {
+            return names;
+        }
+        bool needCheck = true;
+        if (string.IsNullOrEmpty(exName) == true) {
+            needCheck = false;
+        }
+        DirectoryInfo root = new DirectoryInfo(path);
+        FileInfo[] files = root.GetFiles();
+        string ex;
+        for (int i = 0; i < files.Length; i++) {
+            ex = GetExName(files[i].FullName);
+            if (needCheck == true && ex != exName) {
+                continue;
+            }
+            names.Add(StringTools.ChangePathFormat(files[i].FullName));
+        }
+        return names;
+    }
+
+    /// <summary>
+    /// 获取一层的子文件夹列表
+    /// </summary>
+    /// <param name="path"></param>
+    /// <returns></returns>
+    public static List<string> GetSubFolders(string path) {
+        if (!FileTools.IsDirectoryExist(path)) {
+            return null;
+        }
+        DirectoryInfo root = new DirectoryInfo(path);
+        DirectoryInfo[] dirs = root.GetDirectories();
+        List<string> folders = new List<string>();
+        if (dirs.Length > 0) {
+            for (int i = 0; i < dirs.Length; i++) {
+                folders.Add(StringTools.ChangePathFormat(dirs[i].FullName));
+            }
+        }
+        return folders;
+    }
 }

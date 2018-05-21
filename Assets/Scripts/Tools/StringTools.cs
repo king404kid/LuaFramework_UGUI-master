@@ -18,20 +18,6 @@ public class StringTools
     }
 
     /// <summary>
-    /// 移除扩展名
-    /// </summary>
-    /// <param name="str"></param>
-    /// <returns></returns>
-    static public string RemoveExName(string str) {
-        string regexStr = @".+(?=\.)";
-        string strs = GetFirstMatch(str, regexStr);
-        if (string.IsNullOrEmpty(strs)) {
-            strs = str;
-        }
-        return strs;
-    }
-
-    /// <summary>
     /// 获取第一个匹配
     /// </summary>
     /// <param name="str"></param>
@@ -77,5 +63,15 @@ public class StringTools
             }
         }
         return newStr;
+    }
+
+    /// <summary>
+    /// 修改路径斜杠
+    /// </summary>
+    /// <param name="path"></param>
+    /// <returns></returns>
+    static public string ChangePathFormat(string path) {
+        string newPath = path.Replace('\\', '/');
+        return newPath;
     }
 }

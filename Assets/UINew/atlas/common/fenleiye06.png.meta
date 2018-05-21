@@ -1,13 +1,13 @@
 fileFormatVersion: 2
 guid: bddeb4c4dc679b945a1695f170ddd1ac
-timeCreated: 1524212241
+timeCreated: 1526873494
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -28,7 +28,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
     wrapMode: -1
   nPOTScale: 0
@@ -62,7 +62,7 @@ TextureImporter:
     serializedVersion: 2
     sprites: []
     outline: []
-  spritePackingTag: 
+  spritePackingTag: atlas/common
   userData: 
-  assetBundleName: 
+  assetBundleName: atlas/common.unity3d
   assetBundleVariant: 
