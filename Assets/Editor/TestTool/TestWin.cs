@@ -25,12 +25,6 @@ public class TestWin : EditorWindow
     }
 
     void OnGUI() {
-        if (GUILayout.Button("打开进度条")) {
-            EditorUtility.DisplayProgressBar("标题", "内容", 0.5f);
-        }
-        if (GUILayout.Button("关闭进度条")) {
-            EditorUtility.ClearProgressBar();
-        }
         if (GUILayout.Button("测试ReplacePrefab方法")) {
             CreatePrefab();
         }
