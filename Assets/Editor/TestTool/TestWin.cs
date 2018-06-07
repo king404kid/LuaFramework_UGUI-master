@@ -28,6 +28,16 @@ public class TestWin : EditorWindow
         if (GUILayout.Button("测试ReplacePrefab方法")) {
             CreatePrefab();
         }
+        if (GUILayout.Button("打开PlayerSetting")) {
+            EditorApplication.ExecuteMenuItem("Edit/Project Settings/Player");
+        }
+        if (GUILayout.Button("打开并选中文件")) {
+            ShellTool.ShowAndSelectFileInExplorer(Application.dataPath + "/link.xml");
+        }
+        if (GUILayout.Button("更新Asset下的svn")) {
+            ShellTool.ProcessCommand("TortoiseProc.exe", @"/command:update /path:" + Application.dataPath + " /closeonend:2");
+            AssetDatabase.Refresh();
+        }
     }
 
     /// <summary>
