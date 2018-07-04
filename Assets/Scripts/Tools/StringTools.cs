@@ -74,4 +74,25 @@ public class StringTools
         string newPath = path.Replace('\\', '/');
         return newPath;
     }
+
+    /// <summary>
+    /// 获取所有匹配,返回string[]
+    /// </summary>
+    /// <param name="str"></param>
+    /// <param name="regexStr"></param>
+    /// <returns></returns>
+    static public string[] GetAllMatchs(string str, string regexStr) {
+        if (string.IsNullOrEmpty(str) || string.IsNullOrEmpty(regexStr)) {
+            return null;
+        }
+        MatchCollection mc = Regex.Matches(str, regexStr);
+        if (mc.Count == 0) {
+            return null;
+        }
+        string[] matchs = new string[mc.Count];
+        for (int i = 0; i < mc.Count; i++) {
+            matchs[i] = mc[i].Value.ToString();
+        }
+        return matchs;
+    }
 }

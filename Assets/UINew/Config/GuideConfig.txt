@@ -1,0 +1,1 @@
+{"data":{1:{"id":1,"desc":"测试引导","isForce":true,"subData":[{"id":1,"btnType":0,"desc":"一个备注","path":"Canvas/Prefab/GameObject","direction":0,"content":"","offsetX":0,"offsetY":0,"systemOpenFuncName":"","isKeyFrame":false,"isTriggerMainTask":false,"dialogMusic":"","delayShowTime":0,"triggerMaxPlayerLevel":0,"vipNotTrigger":false,"isNeedBlack":false,"inDupCanTrigger":true}]}}}
