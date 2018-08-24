@@ -386,7 +386,14 @@ public class DependFindWin : EditorWindow
         GUILayout.Label("文件夹内共有：" + checkTexSum + "张图片，其中没有被预设用到的有：" + texNoDependTexs.Count + "张");//"找到结果：" + texNoDependTexs.Count);
         texPos = GUILayout.BeginScrollView(texPos, GUILayout.Width(450), GUILayout.Height(350));
         for (int i = 0; i < texNoDependTexs.Count; i++) {
+            GUILayout.BeginHorizontal();
             EditorGUILayout.ObjectField(texNoDependTexs[i], typeof(Texture2D), false, GUILayout.Width(200));
+            if (GUILayout.Button("删除", GUILayout.Width(70), GUILayout.Height(20))) {
+                string path = AssetDatabase.GetAssetPath(texNoDependTexs[i]);
+                AssetDatabase.MoveAssetToTrash(path);
+                texNoDependTexs.RemoveAt(i);
+            }
+            GUILayout.EndHorizontal();
         }
         GUILayout.EndScrollView();
     }
